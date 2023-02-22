@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>posicionamiento CSS</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        article{
+            border: 1px solid red;
+            margin-bottom: 100px;
+        }
+
+        div{
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border: 1px solid blue;
+            line-height: 200px;
+            text-align: center;
+        }
+
+        /*despliegue en bloque*/
+        .bloque div{
+            display: block;
+
+        }
+
+        /*despliegue en linea*/
+        .enlinea div{
+            display: inline;
+            display: inline-block;
+        }
+
+        /*despliegue en tabla*/
+        .entable div{
+            display: table-cell;
+            }
+
+        /*posicionamiento relativo*/
+        #relativo{
+            position: relative;
+            left:300px;
+            top:50px
+
+        }
+        
+
+        /*posicionamiento absoluto*/
+        /*#absoluto{
+            position: absolute;
+            top: 50px;
+            right: 50px;
+        }*/
+
+        /*posicionamiento fijo*/
+        #fijo{
+            position: fixed;
+            background: yellowgreen;
+            right:100px;
+            top:200px;
+
+        }
+
+        /*posicionamiento flotante*/
+        .flotante{
+            height: 600px;
+            width: 100%;
+        }
+        .flotante div{
+            float :right;
+        }
+
+        .flotante div:nth-child(2)
+        {
+            float:left;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    <h1>elementos en bloque</h1>
+    <article class="bloque">
+        <div>rock</div>
+        <div>hardcore</div>
+        <div>punk</div>
+        <div>cumbia</div>
+        <div>funk</div>
+    </article>
+
+    <h1> elementos en linea</h1>
+    <article class="enlinea">
+        <div>de</div>
+        <div>tin</div>
+        <div>marin</div>
+        <div>de</div>
+        <div>do pingue</div>
+    </article>
+
+    <h1>posicionamiento en tabla</h1>
+    <article class="entable">
+        <div>rock</div>
+        <div>hardcore</div>
+        <div>punk</div>
+        <div>cumbia</div>
+        <div>funk</div>
+    </article>
+
+    <h1>posicionamiento</h1>
+    <article class="posicionamiento">
+        <div id="relativo">relativo</div>
+        <div id="absoluto">absoluto</div>
+        <div id="fijo"> fijo</div>
+    </article>
+     <h1> posicionamiento flotante</h1>
+     <article class="flotante">
+     <div>one</div>
+     <div>two</div>
+     <div>three</div>
+    </article>
+</body>
+</html>
